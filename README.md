@@ -1,5 +1,10 @@
  # convert_string
  
+[<img alt="github" src="https://img.shields.io/badge/github-thomblin/convert_string-8da0cb?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/thomblin/convert_string)
+[<img alt="crates.io" src="https://img.shields.io/crates/v/convert_string?style=for-the-badge&color=fc8d62&logo=rust" height="20">](https://crates.io/crates/convert_string)
+[<img alt="docs.rs" src="https://img.shields.io/docsrs/convert_string?logo=docs.rs&labelColor=555555" height="20">](https://docs.rs/convert_string)
+[<img alt="build status" src="https://img.shields.io/github/actions/workflow/status/Thomblin/convert_string/rust.yml?branch=main&style=for-the-badge" height="20">](https://github.com/thomblin/convert_string/actions?query=branch%3Amain)
+
  A trait for String-like types to check if a string is a reserved keyword,
  and convert it to a safe non-keyword if so. Offers some type conversions as well
  
