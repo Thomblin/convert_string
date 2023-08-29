@@ -14,7 +14,7 @@
  
  ```toml
  [dependencies]
- convert_string = "0.1"
+ convert_string = "0.1.1"
  ```
  
  ## Example
