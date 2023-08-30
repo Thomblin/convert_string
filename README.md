@@ -36,7 +36,7 @@
  
  ```toml
  [dependencies]
- convert_string = { version = "0.1", default-features = false }
+ convert_string = { version = "0.1.1", default-features = false }
  ```
  
  Future Rust editions may add new keywords, and this crate will be updated to reflect
@@ -44,9 +44,9 @@
  
  # Credit
  
- Huge parts of this library are taken from <https://github.com/JoelCourtney/check_key
+ Huge parts of this library are taken from <https://github.com/JoelCourtney/check_keyword>
  
- License: MIT OR Apache-2.0
+ License: Apache-2.0
  
  # Source
  
