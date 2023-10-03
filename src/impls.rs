@@ -7,8 +7,8 @@ impl ConvertString for String {
     fn is_keyword(&self) -> bool {
         KEYWORDS.contains(&self.as_ref())
     }
-    
-    /// transform String to PascalCase 
+
+    /// transform String to PascalCase
     fn to_pascal_case(&self) -> String {
         let mut result = String::new();
         let mut capitalize_next = true;
@@ -28,7 +28,7 @@ impl ConvertString for String {
 
         result
     }
-   
+
     /// transform String to snake_case
     fn to_snake_case(&self) -> String {
         let mut result = String::new();
@@ -37,14 +37,14 @@ impl ConvertString for String {
 
         for c in self.chars() {
             if c.is_uppercase() {
-                if result.len() > 0 && !last_uppercase && !last_underscore {
+                if !result.is_empty() && !last_uppercase && !last_underscore {
                     result.push('_');
                 }
                 result.push(c.to_ascii_lowercase());
 
                 last_uppercase = true;
                 last_underscore = false;
-            } else if ! c.is_ascii_alphanumeric() {
+            } else if !c.is_ascii_alphanumeric() {
                 if !last_underscore {
                     result.push('_');
                 }
@@ -59,11 +59,11 @@ impl ConvertString for String {
 
         result
     }
-    
+
     /// convert the String, if it is a reserved keyword. In that case add the prefix and an underscore
     fn to_valid_key(&self, prefix: &String) -> String {
-        let mut new_name = self.replace(":", "_");
-        
+        let mut new_name = self.replace(':', "_");
+
         new_name = new_name.to_snake_case();
 
         if new_name.is_keyword() {
@@ -72,7 +72,7 @@ impl ConvertString for String {
 
         new_name
     }
-    
+
     /// given an XML like namespace string (ns:name), return the part after the colon
     fn remove_namespace(&self) -> String {
         if let Some(index) = self.find(':') {
