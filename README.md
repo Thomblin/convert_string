@@ -45,9 +45,9 @@
  # Credit
  
  Huge parts of this library are taken from <https://github.com/JoelCourtney/check_keyword>
- 
- License: Apache-2.0
- 
+  
  # Source
  
+ License: Apache-2.0
+
  <https://github.com/Thomblin/convert_string>
