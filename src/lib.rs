@@ -106,7 +106,7 @@ pub trait ConvertString {
     /// assert_eq!("r_type", String::from("Type").to_valid_key(&String::from("r")));
     /// assert_eq!("r_abstract", String::from("abstract").to_valid_key(&String::from("r")));
     /// ```
-    fn to_valid_key(&self, prefix: &String) -> String;
+    fn to_valid_key(&self, prefix: &str) -> String;
 
     /// given an XML like namespace string (ns:name), return the part after the colon
     ///

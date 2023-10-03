@@ -61,13 +61,13 @@ impl ConvertString for String {
     }
 
     /// convert the String, if it is a reserved keyword. In that case add the prefix and an underscore
-    fn to_valid_key(&self, prefix: &String) -> String {
+    fn to_valid_key(&self, prefix: &str) -> String {
         let mut new_name = self.replace(':', "_");
 
         new_name = new_name.to_snake_case();
 
         if new_name.is_keyword() {
-            new_name = format!("{}_{}", prefix.to_snake_case(), &new_name);
+            new_name = format!("{}_{}", prefix.to_string().to_snake_case(), &new_name);
         }
 
         new_name
