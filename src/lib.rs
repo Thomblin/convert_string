@@ -9,7 +9,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! convert_string = "0.1.2"
+//! convert_string = "0.1.3"
 //! ```
 //!
 //! ## Example
