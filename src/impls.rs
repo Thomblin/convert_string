@@ -12,10 +12,11 @@ impl ConvertString for String {
     fn to_pascal_case(&self) -> String {
         let mut result = String::new();
         let mut capitalize_next = true;
+        let mut last_uppercase = false;
 
         for c in self.chars() {
             if c.is_ascii_alphanumeric() {
-                if capitalize_next || c.is_uppercase() {
+                if capitalize_next || (c.is_uppercase() && !last_uppercase) {
                     result.push(c.to_ascii_uppercase());
                     capitalize_next = false;
                 } else {
@@ -24,6 +25,7 @@ impl ConvertString for String {
             } else {
                 capitalize_next = true;
             }
+            last_uppercase = c.is_uppercase();
         }
 
         result
