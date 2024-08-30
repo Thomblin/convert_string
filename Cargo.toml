@@ -1,6 +1,6 @@
 [package]
 name = "convert_string"
-version = "0.1.4"
+version = "0.2.0"
 description = "A trait to convert Strings to safe non-keywords and/or convert a Strings case (snake_case, PascalCase, ...)."
 authors = ["Sebastian Detert <rust-crates@elygor.de>"]
 edition = "2021"

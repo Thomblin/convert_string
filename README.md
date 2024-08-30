@@ -14,7 +14,7 @@
  
  ```toml
  [dependencies]
- convert_string = "0.1.4"
+ convert_string = "0.2.0"
  ```
  
  ## Example
@@ -33,7 +33,7 @@
   
  ```toml
  [dependencies]
- convert_string = { version = "0.1.4" }
+ convert_string = { version = "0.2.0" }
  ```
  
  Future Rust editions may add new keywords, and this crate will be updated to reflect
