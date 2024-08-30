@@ -9,7 +9,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! convert_string = "0.1.3"
+//! convert_string = "0.1.4"
 //! ```
 //!
 //! ## Example
@@ -76,7 +76,11 @@ pub trait ConvertString {
     /// assert_eq!("YdTax", String::from("YdTax").to_pascal_case());
     /// assert_eq!("VendorRateId", String::from("VendorRateID").to_pascal_case());
     /// assert_eq!("MvciModuleDescription", String::from("MVCI_MODULE_DESCRIPTION").to_pascal_case());
+    /// assert_eq!("HttpresponseCode", String::from("HTTPResponseCode").to_pascal_case());
     /// assert_eq!("Pintype", String::from("PINTYPE").to_pascal_case());
+    /// assert_eq!("КоммерческаяИнформация", String::from("КоммерческаяИнформация").to_pascal_case());
+    /// assert_eq!("Коммерческаяинформация", String::from("КОММЕРЧЕСКАЯИНФОРМАЦИЯ").to_pascal_case());
+    /// assert_eq!("Коммерческаяинформация", String::from("коммерческаяинформация").to_pascal_case());
     /// ```   
     fn to_pascal_case(&self) -> String;
 
@@ -95,6 +99,7 @@ pub trait ConvertString {
     /// assert_eq!("_id_context", String::from("_ID_Context").to_snake_case());
     /// assert_eq!("mvci_module_description", String::from("MVCI_MODULE_DESCRIPTION").to_snake_case());
     /// assert_eq!("pintype", String::from("PINTYPE").to_snake_case());
+    /// assert_eq!("коммерческая_информация", String::from("КоммерческаяИнформация").to_snake_case());
     /// ```
     fn to_snake_case(&self) -> String;
 

@@ -15,12 +15,16 @@ impl ConvertString for String {
         let mut last_uppercase = false;
 
         for c in self.chars() {
-            if c.is_ascii_alphanumeric() {
+            if c.is_alphanumeric() {
                 if capitalize_next || (c.is_uppercase() && !last_uppercase) {
-                    result.push(c.to_ascii_uppercase());
+                    for upper in c.to_uppercase() {
+                        result.push(upper);
+                    }
                     capitalize_next = false;
                 } else {
-                    result.push(c.to_ascii_lowercase());
+                    for lower in c.to_lowercase() {
+                        result.push(lower);
+                    }
                 }
             } else {
                 capitalize_next = true;
@@ -42,11 +46,13 @@ impl ConvertString for String {
                 if !result.is_empty() && !last_uppercase && !last_underscore {
                     result.push('_');
                 }
-                result.push(c.to_ascii_lowercase());
+                for lower in c.to_lowercase() {
+                    result.push(lower);
+                }
 
                 last_uppercase = true;
                 last_underscore = false;
-            } else if !c.is_ascii_alphanumeric() {
+            } else if !c.is_alphanumeric() {
                 if !last_underscore {
                     result.push('_');
                 }
