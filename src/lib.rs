@@ -26,12 +26,9 @@
 //!
 //! ## Rust Editions
 //!
-//! By default, the keywords added in Rust Edition 2018 are included in the list of checked keywords.
-//! This can be disabled with `default-features = false` in your Cargo.toml.
-//!
 //! ```toml
 //! [dependencies]
-//! convert_string = { version = "0.1", default-features = false }
+//! convert_string = { version = "0.1" }
 //! ```
 //!
 //! Future Rust editions may add new keywords, and this crate will be updated to reflect that.
@@ -131,9 +128,6 @@ pub trait ConvertString {
 
 // defined keywords, taken from <https://github.com/JoelCourtney/check_keyword>
 arr!(static KEYWORDS: [&'static str; _] = [
-
-    // STRICT, 2015
-
     "as",
     "break",
     "const",
@@ -169,15 +163,9 @@ arr!(static KEYWORDS: [&'static str; _] = [
     "use",
     "where",
     "while",
-
-    // STRICT, 2018
-
-    #[cfg(feature = "2018")] "async",
-    #[cfg(feature = "2018")] "await",
-    #[cfg(feature = "2018")] "dyn",
-
-    // RESERVED, 2015
-
+    "async",
+    "await",
+    "dyn",
     "abstract",
     "become",
     "box",
@@ -190,9 +178,6 @@ arr!(static KEYWORDS: [&'static str; _] = [
     "unsized",
     "virtual",
     "yield",
-
-    // RESERVED, 2018
-
-    #[cfg(feature = "2018")] "try"
+    "try"
 
 ]);

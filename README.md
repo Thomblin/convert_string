@@ -30,13 +30,10 @@
  ```
  
  ## Rust Editions
- 
- By default, the keywords added in Rust Edition 2018 are included in the list of chec
- This can be disabled with `default-features = false` in your Cargo.toml.
- 
+  
  ```toml
  [dependencies]
- convert_string = { version = "0.1.4", default-features = false }
+ convert_string = { version = "0.1.4" }
  ```
  
  Future Rust editions may add new keywords, and this crate will be updated to reflect
